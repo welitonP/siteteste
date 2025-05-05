@@ -26,25 +26,35 @@
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 5em;
+      font-size: 6em;
       margin-bottom: 20px;
       color: #fff;
       text-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+      letter-spacing: 2px;
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.3em;
       line-height: 1.6;
       margin-bottom: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .highlight img {
-      width: 60%;
-      max-width: 500px;
-      border: 5px solid #fff;
-      border-radius: 10px;
+      width: 70%;
+      max-width: 550px;
+      border: 6px solid #fff;
+      border-radius: 12px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
       margin: 40px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .highlight img:hover {
+      transform: scale(1.05);
     }
 
     .carousel-container {
@@ -56,16 +66,21 @@
     .carousel {
       display: flex;
       animation: slide 20s linear infinite;
-      gap: 15px;
+      gap: 20px;
       justify-content: center;
       align-items: center;
     }
 
     .carousel img {
-      width: 180px;
+      width: 200px;
       height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.5s ease;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.1);
     }
 
     @keyframes slide {
@@ -107,17 +122,47 @@
         opacity: 0;
       }
     }
+
+    .final-message {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid #f7c6c6;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      color: #d9534f;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-top: 50px;
+      letter-spacing: 1px;
+    }
+
+    .highlight {
+      color: #ff4500;
+      font-size: 22px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .highlight span {
+      font-size: 1.5em;
+      color: #FF6347;
+    }
+
+    .highlight img {
+      transition: transform 0.5s ease;
+    }
+
   </style>
 </head>
 <body>
   <div class="heart-bg">
     <script>
-      for (let i = 0; i < 40; i++) {
+      for (let i = 0; i < 50; i++) {
         const heart = document.createElement('div');
         heart.className = 'heart';
-        heart.style.left = ${Math.random() * 100}%;
-        heart.style.animationDuration = ${5 + Math.random() * 5}s;
-        heart.style.animationDelay = ${Math.random() * 10}s;
+        heart.style.left = `${Math.random() * 100}%`;
+        heart.style.animationDuration = `${5 + Math.random() * 5}s`;
+        heart.style.animationDelay = `${Math.random() * 10}s`;
         document.body.querySelector('.heart-bg').appendChild(heart);
       }
     </script>
@@ -148,6 +193,11 @@
     <p>Imagino nossos dias vivendo lindamente, assistindo Corinthians com o Fred e o Whiskie no colo, e você ao meu lado sorrindo.</p>
     <p>Se algum dia essa mensagem tocar seu coração, saiba: eu continuo aqui. Sempre estarei.</p>
     <p><strong>TE AMO DJESSICA</strong><br>Com muito amor, Weliton</p>
+
+    <!-- Mensagem de humor -->
+    <div class="final-message">
+      <p>Esse sou eu, pedindo o emprego de marido de novo. Não aceito justa causa, contrato vitalício, aceito passar, secar, guardar, juntar o coco dos misses e mais importante de todos, <span class="highlight">LAVAR A LAVAÇÃO SE PRECISO TODOS OS DIAS!</span></p>
+    </div>
   </div>
 </body>
 </html>
