@@ -2,20 +2,78 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Deixe seu currículo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <title>Amo Você</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(to right, #ffe0e6, #ffd6f5);
-      color: #4a4a4a;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: #fff;
+      text-align: center;
       overflow-x: hidden;
       position: relative;
     }
 
-    .heart-floating {
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+      z-index: 1;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5em;
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 4px 4px 12px rgba(0,0,0,0.6);
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .highlight img {
+      width: 60%;
+      max-width: 500px;
+      border: 5px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      margin: 40px 0;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      width: 100%;
+      margin: 30px auto;
+    }
+
+    .carousel {
+      display: flex;
+      animation: slide 20s linear infinite;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel img {
+      width: 180px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .heart-bg {
       position: fixed;
       top: 0;
       left: 0;
@@ -28,11 +86,11 @@
 
     .heart {
       position: absolute;
-      width: 30px;
-      height: 30px;
-      background: url('https://i.imgur.com/w1bWCUb.png') no-repeat center center;
+      width: 25px;
+      height: 25px;
+      background: url('https://i.imgur.com/w1bWCUb.png') no-repeat center;
       background-size: contain;
-      animation: float 12s linear infinite;
+      animation: float 10s linear infinite;
       opacity: 0.5;
     }
 
@@ -49,115 +107,47 @@
         opacity: 0;
       }
     }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 60px 20px;
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3em;
-      color: #d63384;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      transition: all 0.3s ease;
-    }
-
-    .main-img {
-      width: 100%;
-      max-width: 600px;
-      margin: 30px 0;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      transition: transform 0.4s ease;
-    }
-
-    .main-img:hover {
-      transform: scale(1.05);
-    }
-
-    .carousel-wrapper {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      margin-top: 40px;
-    }
-
-    .carousel {
-      display: flex;
-      animation: scroll 8s linear infinite;
-    }
-
-    .carousel img {
-      width: 100%;
-      max-width: 450px;
-      margin-right: 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    @keyframes scroll {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .signature {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8em;
-      color: #d63384;
-      margin-top: 40px;
-    }
   </style>
 </head>
 <body>
-  <div class="heart-floating">
+  <div class="heart-bg">
     <script>
       for (let i = 0; i < 40; i++) {
         const heart = document.createElement('div');
         heart.className = 'heart';
-        heart.style.left = `${Math.random() * 100}%`;
-        heart.style.animationDuration = `${8 + Math.random() * 8}s`;
-        heart.style.animationDelay = `${Math.random() * 10}s`;
-        document.body.querySelector('.heart-floating').appendChild(heart);
+        heart.style.left = ${Math.random() * 100}%;
+        heart.style.animationDuration = ${5 + Math.random() * 5}s;
+        heart.style.animationDelay = ${Math.random() * 10}s;
+        document.body.querySelector('.heart-bg').appendChild(heart);
       }
     </script>
   </div>
 
   <div class="container">
-    <h1>Deixe seu currículo</h1>
-    <p>Estou com muita saudade de você. Não sou só eu… Fred e Whiskie também sentem sua falta todos os dias.</p>
-    <p>Te amo mais do que consigo expressar. Nada faz sentido sem você ao meu lado. Estou aberto pra conversar e disposto a fazer o que for preciso.</p>
-    <p>Já passamos por tantos momentos — muitos bons, outros difíceis. Mas tudo isso me fez crescer. E hoje, mais do que nunca, quero viver a vida com você. Assistindo nosso Corinthians, com nossos filhos de quatro patas no colo.</p>
-    <p>Você é tudo que eu amo. E eu tô aqui, pronto pra fazer dar certo.</p>
+    <h1>Amo Você</h1>
+    <p>Oi meu amor, estou com muita saudade de você, não só eu — Fred e Whiskie também.</p>
+    <p>Te amo muito e não passa na minha cabeça uma vida sem você. Estou aberto a conversar e posso abrir mão de qualquer coisa para estarmos juntos.</p>
 
-    <img class="main-img" src="https://i.imgur.com/RMj9mbj.jpeg" alt="Foto principal" />
+    <div class="highlight">
+      <img src="https://i.imgur.com/RMj9mbj.jpeg" alt="Imagem principal em destaque">
+    </div>
 
-    <div class="carousel-wrapper">
+    <p>Você é o amor da minha vida. Passamos por tantos momentos... alguns ruins, mas muitos incríveis. E tudo me ensinou que quero você pra sempre.</p>
+
+    <div class="carousel-container">
       <div class="carousel">
         <img src="https://i.imgur.com/2a6Asxc.jpeg" alt="Momento 1">
         <img src="https://i.imgur.com/ghmZCmV.jpeg" alt="Momento 2">
-        <img src="https://i.imgur.com/GQhGPNn.jpg" alt="Momento 3">
-        <img src="https://i.imgur.com/2a6Asxc.jpeg" alt="Repetição 1">
-        <img src="https://i.imgur.com/ghmZCmV.jpeg" alt="Repetição 2">
-        <img src="https://i.imgur.com/GQhGPNn.jpg" alt="Repetição 3">
+        <img src="https://i.imgur.com/GQhGPNn.jpeg" alt="Momento 3">
+        <img src="https://i.imgur.com/2a6Asxc.jpeg" alt="Momento 4">
+        <img src="https://i.imgur.com/ghmZCmV.jpeg" alt="Momento 5">
+        <img src="https://i.imgur.com/GQhGPNn.jpeg" alt="Momento 6">
       </div>
     </div>
 
-    <p class="signature">Te amo, Djessica<br>Com todo meu amor, Weliton</p>
+    <p>Imagino nossos dias vivendo lindamente, assistindo Corinthians com o Fred e o Whiskie no colo, e você ao meu lado sorrindo.</p>
+    <p>Se algum dia essa mensagem tocar seu coração, saiba: eu continuo aqui. Sempre estarei.</p>
+    <p><strong>TE AMO DJESSICA</strong><br>Com muito amor, Weliton</p>
   </div>
 </body>
 </html>
