@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Deixe seu currículo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #ffe0e6, #ffd6f5);
+      color: #4a4a4a;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .heart-floating {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('https://i.imgur.com/w1bWCUb.png') no-repeat center center;
+      background-size: contain;
+      animation: float 12s linear infinite;
+      opacity: 0.5;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 60px 20px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .main-img {
+      width: 100%;
+      max-width: 600px;
+      margin: 30px 0;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease;
+    }
+
+    .main-img:hover {
+      transform: scale(1.05);
+    }
+
+    .carousel-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .carousel {
+      display: flex;
+      animation: scroll 8s linear infinite;
+    }
+
+    .carousel img {
+      width: 100%;
+      max-width: 450px;
+      margin-right: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8em;
+      color: #d63384;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart-floating">
+    <script>
+      for (let i = 0; i < 40; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = `${Math.random() * 100}%`;
+        heart.style.animationDuration = `${8 + Math.random() * 8}s`;
+        heart.style.animationDelay = `${Math.random() * 10}s`;
+        document.body.querySelector('.heart-floating').appendChild(heart);
+      }
+    </script>
+  </div>
+
+  <div class="container">
+    <h1>Deixe seu currículo</h1>
+    <p>Estou com muita saudade de você. Não sou só eu… Fred e Whiskie também sentem sua falta todos os dias.</p>
+    <p>Te amo mais do que consigo expressar. Nada faz sentido sem você ao meu lado. Estou aberto pra conversar e disposto a fazer o que for preciso.</p>
+    <p>Já passamos por tantos momentos — muitos bons, outros difíceis. Mas tudo isso me fez crescer. E hoje, mais do que nunca, quero viver a vida com você. Assistindo nosso Corinthians, com nossos filhos de quatro patas no colo.</p>
+    <p>Você é tudo que eu amo. E eu tô aqui, pronto pra fazer dar certo.</p>
+
+    <img class="main-img" src="https://i.imgur.com/RMj9mbj.jpeg" alt="Foto principal" />
+
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <img src="https://i.imgur.com/2a6Asxc.jpeg" alt="Momento 1">
+        <img src="https://i.imgur.com/ghmZCmV.jpeg" alt="Momento 2">
+        <img src="https://i.imgur.com/GQhGPNn.jpg" alt="Momento 3">
+        <img src="https://i.imgur.com/2a6Asxc.jpeg" alt="Repetição 1">
+        <img src="https://i.imgur.com/ghmZCmV.jpeg" alt="Repetição 2">
+        <img src="https://i.imgur.com/GQhGPNn.jpg" alt="Repetição 3">
+      </div>
+    </div>
+
+    <p class="signature">Te amo, Djessica<br>Com todo meu amor, Weliton</p>
+  </div>
+</body>
+</html>
